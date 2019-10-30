@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
-import Chat from "./components/chat";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
-        <div >
-            <div className="container" id="container">
-                <Chat />
-            </div>
-        </div>
+      <div>
+        <NavBar/>
+      </div>
   );
 }
 

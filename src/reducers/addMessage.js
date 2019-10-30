@@ -45,5 +45,5 @@ const messages = (state = [], action) => {
 
     }else
         return state
-}
+};
 export default messages
