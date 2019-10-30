@@ -1,0 +1,55 @@
+* {
+  font-size: 10px;
+}
+.App {
+  text-align: center;
+}
+.container {
+  margin:0 30%;
+}
+.App-logo {
+  height: 40vmin;
+}
+form {
+  margin:0 30%;
+}
+#btn{
+  margin: 10px 30% !important;
+  width: 40%;
+}
+.left, .right {
+  list-style-type:none;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  min-width: 40%;
+  padding:20px;
+  margin-top: 20px;
+}
+.left strong, right strong {
+  color:grey;
+}
+.left{
+  text-align:left;
+  background-color: #E9EBEE;
+  color:black
+}
+.right{
+  text-align:right;
+  color:white;
+  background-color: #3578E5;
+}
+.App-header {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
