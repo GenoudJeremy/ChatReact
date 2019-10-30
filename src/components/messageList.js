@@ -2,7 +2,6 @@ import MessageItem from './messageItem'
 import React from "react";
 
 class MessageList extends React.Component {
-
     render() {
         if (this.props.messages.length === 0) {
             return <strong>No messages</strong>

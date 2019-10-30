@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-import { addMessage } from "../actions/actions";
+import {addMessage} from "../actions/actions";
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -44,5 +44,5 @@ class MessageBar extends React.Component{
             </form>
         )
     }
-}
+};
 export default connect(null, mapDispatchToProps)(MessageBar);
