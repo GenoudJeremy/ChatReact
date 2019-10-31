@@ -7,12 +7,20 @@ const mapDispatchToProps = (dispatch) => {
         Logout: (username) => dispatch(Logout(username)),
     }
 };
-
+const mapStateToProps = (state) => {
+    return {
+        log: state.log,
+    }
+};
 class LogoutPage extends React.Component{
     constructor(props){
-        super(props)
+        super(props);
+        this.state = {
+            username: this.props.log.username
+        }
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
-    handleSubmit(event){
+    handleSubmit(){
         this.props.Logout('');
         this.setState({username: ''});
     }
@@ -23,4 +31,4 @@ class LogoutPage extends React.Component{
     }
 }
 
-export default connect(null, mapDispatchToProps)(LogoutPage);
+export default connect(mapStateToProps, mapDispatchToProps)(LogoutPage);

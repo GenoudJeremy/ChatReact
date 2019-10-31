@@ -13,6 +13,7 @@ class LoginPage extends React.Component{
     constructor(props){
         super(props)
         this.state = {username: ''};
+        user = this.state.username;
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
