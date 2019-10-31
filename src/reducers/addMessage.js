@@ -33,17 +33,30 @@
     }
 };*/
 const messages = (state = [], action) => {
-    if (action.type === 'ADD_MESSAGE'){
-        return [
-            ...state,
-            {
-                id: action.id,
-                message: action.message,
-                auteur: action.auteur,
-            }
-        ];
-
-    }else
-        return state
+    switch(action.type){
+        case 'ADD_MESSAGE':
+            return [
+                ...state,
+                {
+                    id: action.id,
+                    message: action.message,
+                    username: action.username,
+                }
+            ];
+        case 'SEND_MESSAGE':
+            return [
+                ...state,
+                {
+                    id: action.id,
+                    message: action.message,
+                    username: action.username,
+                }
+            ];
+        case 'DELETE_MESSAGE':
+            return state.filter((data, id) => id !== action.id)
+        case 'UPDATE_MESSAGE':
+        default:
+            return state
+    }
 };
 export default messages

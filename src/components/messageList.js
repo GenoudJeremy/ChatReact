@@ -7,7 +7,7 @@ class MessageList extends React.Component {
             return <strong>No messages</strong>
         } else {
             const conv = this.props.messages.map((element, key) =>
-                <MessageItem key={key} num={key} auteur={element.auteur} message={element.message}/>);
+                <MessageItem key={key} num={key} username={element.username} message={element.message}/>);
             return conv;
         }
     }

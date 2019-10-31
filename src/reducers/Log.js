@@ -1,19 +1,17 @@
-const log = (state = [], action) => {
+const log = (state = {username:""}, action) => {
     switch (action.type){
         case('LOG_IN'):
-            return [
-                ...state,
+            return (
                 {
                     username: action.username,
-                }
-            ];
+                })
+            ;
         case('LOG_OUT'):
-            return [
-                ...state,
+            return (
                 {
                     username: action.username,
-                }
-            ];
+                })
+            ;
         default:
             return state
     }

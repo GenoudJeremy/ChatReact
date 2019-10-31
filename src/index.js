@@ -13,7 +13,7 @@ const logger = store => next => action => {
     return next(action);
 }
 
-const store = createStore(
+export const store = createStore(
     rootReducer,
     compose(applyMiddleware(thunk, logger),
         window.__REDUX_DEVTOOLS_EXTENSION__ ?

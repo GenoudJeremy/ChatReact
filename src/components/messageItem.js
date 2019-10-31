@@ -7,7 +7,11 @@ class MessageItem extends React.Component {
         if (this.props.num % 2 === 0){
             align = 'right'
         }
-        return <li className={align}><p><Emoji text={this.props.message}/></p><br/><strong>{this.props.auteur}</strong></li>
+        if (typeof this.props.message === 'string' && typeof this.props.username === 'string')
+        {return <li className={align}><p><Emoji text={this.props.message}/></p><br/><strong><Emoji text={this.props.username}/></strong></li>}
+        else {
+            return ''
+        }
     }
 }
 export default MessageItem;

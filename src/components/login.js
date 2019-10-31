@@ -2,6 +2,7 @@ import * as React from "react";
 import {connect} from "react-redux";
 import {Login} from "../actions/log_reducer";
 
+let user = "";
 const mapDispatchToProps = (dispatch) => {
     return {
         Login: (username) => dispatch(Login(username)),
@@ -22,11 +23,16 @@ class LoginPage extends React.Component{
         event.preventDefault();
         if (this.state.username.trim() !== "") {
             this.props.Login(this.state.username);
-            this.setState({username: ""})
+            user = this.state.username;
         }
     }
     render() {
-        return (
+        if (user !== ""){
+            return (
+                <div>Hello {user}</div>
+            )
+        }else
+        {return (
             <form id="login" name="login" onSubmit={this.handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="username">Username</label>
@@ -36,7 +42,7 @@ class LoginPage extends React.Component{
                     <input type="submit" className="btn btn-dark"/>
                 </div>
             </form>
-        )
+        )}
     }
 };
 export default connect(null, mapDispatchToProps)(LoginPage)
