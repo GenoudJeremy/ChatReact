@@ -9,7 +9,6 @@ import thunk from "redux-thunk";
 import Provider from "react-redux/es/components/Provider";
 
 const logger = store => next => action => {
-    console.log(action)
     return next(action);
 }
 

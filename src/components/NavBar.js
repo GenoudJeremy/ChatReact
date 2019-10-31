@@ -13,7 +13,6 @@ const mapStateToProps = (state) => {
 
 class NavBar extends React.Component{
     render() {
-        console.log(this.props.log.length)
         let link_log = LoginPage;
         if (this.props.log.username !== "") {
             link_log = Chat
