@@ -1,5 +1,5 @@
 import {store} from "../index";
-const url = 'ws://172.16.64.11:8080';
+const url = 'wss://srrj6.sse.codesandbox.io/';
 let ws = new WebSocket(url);
 ws.onopen = () => {
     console.log('connected')
